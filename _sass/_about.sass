@@ -1,0 +1,62 @@
+
+.about
+  padding-top: 5em
+  padding-bottom: 5em
+
+  .silhouette
+    margin-top: 3em
+    margin-bottom: 2em
+
+  p
+    font:
+      font-family: 'Open Sans', sans-serif
+      size: 1.2em
+      weight: 300
+    margin-top: 1em
+    letter-spacing: 0.03em
+
+    span
+      color: $primary-color
+
+  .skill-lockup
+    font-family: 'Open Sans', sans-serif
+    color: $secondary-text-color
+    margin-top: 4.5em
+    margin-bottom: 2em
+    padding-left: 0
+
+    .skill-bar
+      margin: 5px 0 35px
+
+      span
+        display: inline-block
+        height: 14px
+        width: 14px
+        background-color: rgba($accent-color, 0.8)
+        margin-right: 6px
+        border-radius: 50%
+
+        &:after
+          content: ''
+          display: block
+          height: 10px
+          width: 10px
+          background: $primary-color-text
+          border-radius: 50%
+          margin: 2px
+
+      @for $i from 1 through 10
+        &.skill-#{$i} span:nth-child(n+#{$i+1})
+          @extend %skill-color
+
+    %skill-color
+      background: rgba($divider-color, 0.8)
+
+  .toolbox
+    margin-top: 3em
+
+    .logo
+      display: inline-block
+      height: 70px
+      width: 70px
+      margin-left: 1.5em
