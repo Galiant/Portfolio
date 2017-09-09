@@ -1,12 +1,12 @@
 
 .navbar
-  min-height: 500px
   background: url(/assets/images/header.jpg) center center
   background-size: cover
   background-color: #22313F
   background-blend-mode: overlay
   margin-bottom: 0
   border-bottom: none
+  padding-bottom: 7em
 
   .navbar-nav > li > a
     font-weight: 700
@@ -19,7 +19,7 @@
       color: $primary-color
 
 #navbar
-  margin-top: 1em
+  margin-top: 1.5em
 
 .header-text
   font-family: 'Roboto', sans-serif
@@ -44,3 +44,24 @@
       weight: 700
     letter-spacing: 0.05em
     line-height: 1
+
+@media (max-width: 767px)
+  .navbar
+    padding-bottom: 4em
+
+  .navbar-default .navbar-toggle
+    margin-top: 0.8em
+    border-color: $primary-color-text
+
+    .icon-bar
+      background-color: $primary-color-text
+
+    &:hover, &:focus, &:visited, &:active
+      background-color: rgba($primary-color-text, 0.0)
+
+  #navbar
+    margin-top: 0.6em
+    border-bottom: 1px solid $primary-color-text
+
+  .header-text
+    margin-top: 3em
