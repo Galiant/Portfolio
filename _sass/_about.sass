@@ -18,7 +18,7 @@
     span
       color: $primary-color
 
-  .skill-lockup
+  .skill-lockup, .skill-lockup-2
     font-family: 'Open Sans', sans-serif
     color: $secondary-text-color
     margin-top: 4.5em
@@ -60,3 +60,32 @@
       height: 70px
       width: 70px
       margin-left: 1.5em
+
+@media screen and (max-width: 991px)
+  .skill-lockup-2
+    margin-left: 4em
+
+@media screen and (max-width: 654px)
+  .skill-lockup, .skill-lockup-2
+    width: 215px
+    margin-left: 4em
+
+@media screen and (max-width: 574px)
+  .about .skill-lockup
+    margin-top: 2.5em
+    margin-bottom: 0
+    margin-left: 6em
+
+  .about .skill-lockup-2
+    margin-top: 0
+    margin-left: 6em
+
+@media screen and (max-width: 376px)
+  .about .skill-lockup
+    margin-top: 2.5em
+    margin-bottom: 0
+    margin-left: 4em
+
+  .about .skill-lockup-2
+    margin-top: 0
+    margin-left: 4em
