@@ -1,21 +1,26 @@
 
 footer
   font-family: 'Open Sans', sans-serif
-  height: 240px
-  padding: 4.5em
   background: url(/assets/images/header.jpg) center center
   background-size: cover
   background-color: #22313F
   background-blend-mode: overlay
+  padding-top: 4.5em
+  padding-bottom: 4.5em
 
   nav
+    width: 100%
+    margin-right: auto
+    margin-left: auto
     text-align: center
     padding-bottom: 4em
 
-    a
+    .nav-link
       font-weight: 700
       color: $primary-color-text
-      margin-left: 2em
+
+      &:nth-of-type(n+2)
+        margin-left: 2em
 
       &:visited
         color: $primary-color-text
@@ -24,29 +29,62 @@ footer
       &:hover
         color: $primary-color
         text-decoration: none
-
-      &:active
+      
+      &:focus
         text-decoration: none
 
-  .copyright
-    margin-top: 0.6em
+      &:active
+        color: $primary-color
+        text-decoration: none
+
+  .copy
+    margin-top: .6em
     color: $primary-color-text
     font:
       weight: 700
-      size: 0.95em
+      size: .95em
 
     .name
       color: $primary-color
 
-      &:hover
-        text-decoration: underline
+    a:visited
+      text-decoration: none
+      color: $primary-color
+
+    a:hover
+      text-decoration: underline
+
+    a:focus
+      text-decoration: none
+      
+    a:active
+      text-decoration: none
 
   .social 
     text-align: right
 
   .social a
     color: $primary-text-color
-    margin-left: 0.2em
+    margin-left: .2em
 
     &:hover
       color: $primary-color
+
+@media screen and (max-width: 767px)
+  footer nav .nav-link:nth-of-type(n+2)
+        margin-left: .75em
+
+  .footer-contact
+    display: flex
+    flex-direction: column
+
+    .copy
+      order: 2
+      text-align: center
+      margin-top: 4em
+      border-top: 1px solid rgba($primary-color-text, .7)
+      padding-top: 4em
+
+    .social
+      order: 1
+      text-align: center !important

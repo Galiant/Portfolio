@@ -1,7 +1,3 @@
-$(function() {
-    $(".header-text h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
-});
-
 /*SMOOTH SCROLLING*/
 $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
 
@@ -25,6 +21,11 @@ $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
 
     }
 
+});
+
+/*FIT TEXT*/
+$(function() {
+    $(".header-text h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
 });
 
 /*!
