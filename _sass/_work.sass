@@ -2,7 +2,7 @@
 .work
   padding-top: 4em
   padding-bottom: 7em
-  background-color: rgba($divider-color, .7)
+  background-color: rgba($divider-color, .6)
 
 /* ==HOVER EFFECT== https://github.com/codrops/HoverEffectIdeas */
 
@@ -93,6 +93,28 @@ figure.effect
     opacity: 1
     -webkit-transform: translate3d(0,0,0)
     transform: translate3d(0,0,0)
+
+.project-title
+  font:
+    family: 'Roboto', sans-serif
+    size: 1.5em
+    weight: 700
+  text-transform: uppercase
+  letter-spacing: .1em
+  color: $accent-color
+  text-align: center
+  margin-top: 2.5em
+
+.project-link
+  color: $primary-color
+
+  &:hover
+    color: $primary-color
+
+.dummy-img
+    height: 450px
+    max-width: 600px
+    background-image: url(/assets/images/project1-big.jpg)
 
 @media screen and (max-width: 767px)
   .grid
